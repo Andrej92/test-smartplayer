@@ -6,4 +6,7 @@ export const constants = {
     THRESHHOLD: 200,
     PER_PAGE: 20,
   },
+  modals: {
+    MIN_WIDTH: 300,
+  }
 }

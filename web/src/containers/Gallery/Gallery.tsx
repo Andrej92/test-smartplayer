@@ -22,11 +22,9 @@ export const Gallery: FunctionComponent = () => {
       initPagination(ref)
     }
 
-    if (images.length) {
+    if (isPaginationInit) {
       unlockPagination()
     }
-
-
   }, [images])
   
 

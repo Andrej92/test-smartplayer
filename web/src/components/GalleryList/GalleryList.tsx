@@ -10,7 +10,7 @@ const GalleryList: FunctionComponent<IGalleryListComponent> = ({ images }) => {
   const renderImages = () => {
     return images.map((image: IImage, index) => {
       return (<GalleryItem 
-        key={image.id + '' + index} 
+        key={`${image.id}${index}`} 
         image={image}
       />);
     })

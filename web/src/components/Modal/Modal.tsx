@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styles from './Modal.module.scss';
+import { constants } from 'helpers/constants';
 
 export interface IModalComponent {
   title: string,
@@ -9,7 +10,7 @@ export interface IModalComponent {
 
 export const Modal: FunctionComponent<IModalComponent> = ({ 
   title,
-  width = 300, 
+  width = constants.modals.MIN_WIDTH, 
   children, 
   onClose
 }) => {
