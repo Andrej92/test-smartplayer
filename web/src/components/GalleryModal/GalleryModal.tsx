@@ -16,11 +16,6 @@ export const GalleryModal: FunctionComponent<IGalleryModalComponent> = ({
 }) => {
   const [isImgPainted, setImageState] = useState<boolean>(false);
 
-  const imgStyles = {
-    width: imgWidth,
-    height: imgHeight
-  }
-
   const handleLoadEvent = () => {
     setImageState(true)
   }
@@ -28,7 +23,6 @@ export const GalleryModal: FunctionComponent<IGalleryModalComponent> = ({
   return (
     <div className={styles.GalleryModal}>
       <img src={src} alt={imgName} title={imgName} onLoad={handleLoadEvent}/>
-      { !isImgPainted && <div className={styles.GalleryModal__stub} style={imgStyles}></div> }
     </div>
   )
 }
