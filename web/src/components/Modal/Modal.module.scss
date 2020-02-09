@@ -1,0 +1,53 @@
+.Modal {
+  background: #fff;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  &__close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      height: 30px;
+      width: 1px;
+      background: #000;
+      pointer-events: none;
+      content: '';
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    align-items: center;
+    padding: 20px;
+    background: #eee;
+    color: #000;
+  }
+
+  &__body {
+    padding: 20px;
+  }
+}

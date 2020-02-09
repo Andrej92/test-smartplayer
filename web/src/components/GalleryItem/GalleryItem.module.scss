@@ -1,0 +1,26 @@
+.GalleryItem {  
+  &__image {  
+    position: relative;
+    padding: 56% 0 0 0;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      
+      content: '';
+      z-index: 10;
+      pointer-events: none;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+        transition: all 0.25s;
+      }
+    }
+  }
+}
